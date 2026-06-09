@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette</title>
+    <script src="script.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        
+        /* Layout split: Main content on left, history on right */
+        .container { display: flex; justify-content: space-between; max-width: 800px; }
+        .main-content { flex: 1; }
+        .history-pane { width: 200px; border-left: 2px solid #ccc; padding-left: 20px; }
+        
+        /* Styling the color palette table */
+        table { border-collapse: collapse; margin-bottom: 20px; }
+        td { width: 60px; height: 60px; border: 2px solid #333; cursor: pointer; }
+        
+        /* The dynamic text style */
+        #helloText { font-size: 2rem; font-weight: bold; margin-top: 20px; transition: color 0.3s; }
+        
+        /* Assign colors to the 6 table cells */
+        .c1 { background-color: blue; }
+        .c2 { background-color: green; }
+        .c3 { background-color: magenta; }
+        .c4 { background-color: orange; }
+        .c5 { background-color: red; }
+        .c6 { background-color: purple; }
+    </style>
+</head>
+<body>
+
+    <h2>Exercise 2: Color Palette</h2>
+    
+    <div class="container">
+        
+        <div class="main-content">
+            <p>Pick a color from the palette:</p>
+            <table>
+                <tr>
+                    <td class="c1" onclick="chooseColor('blue')"></td>
+                    <td class="c2" onclick="chooseColor('green')"></td>
+                    <td class="c3" onclick="chooseColor('magenta')"></td>
+                    <td class="c4" onclick="chooseColor('orange')"></td>
+                    <td class="c5" onclick="chooseColor('red')"></td>
+                    <td class="c6" onclick="chooseColor('purple')"></td>
+                </tr>
+            </table>
+
+            <div id="helloText">Hello world!</div>
+        </div>
+
+        <div class="history-pane">
+            <h4>Color History</h4>
+            <ul id="historyList"></ul>
+        </div>
+        
+    </div>
+
+    <script>
+        // JavaScript logic goes here!
+    </script>
+
+</body>
+</html>
